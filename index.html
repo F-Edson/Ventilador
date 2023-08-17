@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ventilador</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        padding: 13px;
+        border-radius: 10px;
+        top: 12rem;
+        left: -82px;
+        animation: rotate 0.1s linear infinite;
+        z-index: 9999;
+    }
+
+
+    #barra {
+        background-color: #2bbf17;
+        height: 400px;
+        width: 35px;
+        border-radius: 10px;
+        position: relative;
+        top: 160px;
+    }
+
+    #liga {
+        cursor: pointer;
+        z-index: 9999;
+        position: relative;
+        padding: 10px;
+        background-color: rgb(250, 204, 0);
+        border-radius: 20px;
+        right: -6px;
+
+    }
+
+    #ligar:active {
+        background-color: rgb(0, 253, 34);
+    }
+
+    #desligar {
+        cursor: pointer;
+        z-index: 9999;
+        position: relative;
+        padding: 10px;
+        background-color: rgb(255, 0, 0);
+        border-radius: 20px;
+        top: 70px;
+        right: 22px;
+    }
+
+    #desligar:active {
+        background-color: rgb(255, 60, 0);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(100deg);
+            /* Rotação inicial */
+        }
+
+        100% {
+            transform: rotate(360deg);
+            /* Rotação completa */
+        }
+
+    }
+
+
+    @media screen and (max-width:768px) {
+        body {
+            position: relative;
+            padding-left: 150px;
+        }
+    }
+</style>
+
+<body>
+
+    <div>
+        <input type="search" name="" id="catavento">
+        <div id="barra"></div>
+        <button onclick=" ligar()" id="liga"></button>
+        <button onclick=" desligar()" id="desligar"></button>
+    </div>
+
+    <script>
+        function ligar() {
+            const catavento = document.getElementById('catavento');
+            catavento.style.animationName = 'rotate';
+        }
+
+        function desligar() {
+            const catavento = document.getElementById('catavento');
+            catavento.style.animationName = 'none';
+        }
+    </script>
+</body>
+
+</html>
