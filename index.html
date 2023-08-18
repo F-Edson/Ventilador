@@ -14,6 +14,7 @@
         justify-content: center;
         margin: 0;
         padding: 0;
+        background: rgb(55, 92, 173);
     }
 
     input {
@@ -25,6 +26,10 @@
         left: -82px;
         animation: rotate 0.1s linear infinite;
         z-index: 9999;
+       border: 2px solid #2bbf17;
+    }
+    input:hover{
+        background: rgb(252, 5, 5);
     }
 
 
@@ -99,6 +104,8 @@
     </div>
 
     <script>
+        catavento.style.animationName = 'none';
+
         function ligar() {
             const catavento = document.getElementById('catavento');
             catavento.style.animationName = 'rotate';
